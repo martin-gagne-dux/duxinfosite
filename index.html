@@ -40,7 +40,7 @@
 
   <script>
   	function addToMailingList(){
-	  	firebase.collection("MailingList").add({
+	  	db.collection("MailingList").add({
 	  		email: document.getElementById("email-2").text,
 	  	})
 	}
