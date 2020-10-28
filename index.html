@@ -35,11 +35,12 @@
 	  };
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
+	  var db = firebase.firestore();
 	</script>
 
   <script>
   	function addToMailingList(){
-	  	firebase-firestore.collection("MailingList").add({
+	  	firebase.collection("MailingList").add({
 	  		email: document.getElementById("email-2").text,
 	  	})
 	}
