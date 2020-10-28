@@ -14,12 +14,14 @@
   <script type="text/javascript">WebFont.load({  google: {    families: ["Gothic A1:300,regular,500,600,700,800"]  }});</script>
 
   <script>
-  	var yourMessage = "A new user has been added to the mailing list";
-    var subject = "New Subscribe";
+  	function addToMailingList(){
+	  	var yourMessage = "A new user has been added to the mailing list";
+	    var subject = "New Subscribe";
 
-    document.location.href = "mailto:subscribers@duxplatform.com?subject="
-        + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(yourMessage);
+	    document.location.href = "mailto:subscribers@duxplatform.com?subject="
+	        + encodeURIComponent(subject)
+	        + "&body=" + encodeURIComponent(yourMessage);
+	}
   </script>
 
 
