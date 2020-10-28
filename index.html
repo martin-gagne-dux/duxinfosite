@@ -40,10 +40,11 @@
 
   <script>
   	function addToMailingList(){
-  		String _email = document.getElementById("email-2").text;
-  		Console.log(_email);
+  		Console.log(document.getElementById("email-2").text);
+  		String emailEntered = document.getElementById("email-2").text;
+  		
 	  	db.collection("MailingList").add({
-	  		email: _email
+	  		email: emailEntered
 	  	})
 	}
   </script>
