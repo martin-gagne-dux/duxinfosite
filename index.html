@@ -40,7 +40,8 @@
 
   <script>
   	function addToMailingList(){
-  		var _email = document.getElementById("email-2").text;
+  		String _email = document.getElementById("email-2").text;
+  		Console.log(_email);
 	  	db.collection("MailingList").add({
 	  		email: _email
 	  	})
