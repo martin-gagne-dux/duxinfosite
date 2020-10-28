@@ -13,14 +13,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Gothic A1:300,regular,500,600,700,800"]  }});</script>
 
+	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyCD-L0b4VV8JBCS9aCiWyOn0K2ji6NG4qc",
+	    authDomain: "duxlingsonline.firebaseapp.com",
+	    databaseURL: "https://duxlingsonline.firebaseio.com",
+	    projectId: "duxlingsonline",
+	    storageBucket: "duxlingsonline.appspot.com",
+	    messagingSenderId: "838991319035",
+	    appId: "1:838991319035:web:3bb781d8f99d26d150455e",
+	    measurementId: "G-ZZS0P3TQ7M"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
+
   <script>
   	function addToMailingList(){
-	  	var yourMessage = "A new user has been added to the mailing list";
-	    var subject = "New Subscribe";
-
-	    document.location.href = "mailto:subscribers@duxplatform.com?subject="
-	        + encodeURIComponent(subject)
-	        + "&body=" + encodeURIComponent(yourMessage);
+	  	db.collection("MailingList").add({
+	  		email: document.getElementById("email-2").text,
+	  	})
 	}
   </script>
 
