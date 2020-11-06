@@ -18070,20 +18070,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
   function afterSubmit(data) {
-    var form = data.form;
-    var redirect = data.redirect;
-    var success = data.success; // Redirect to a success url if defined
-
-    if (success && redirect) {
-      Webflow.location(redirect);
-      return;
-    } // Show or hide status divs
-
-
-    data.done.toggle(success);
-    data.fail.toggle(!success); // Hide form on success
-
-    form.toggle(!success); // Reset data and enable submit button
+    data.done.toggle(true);
 
     reset(data);
   }
